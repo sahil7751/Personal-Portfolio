@@ -280,27 +280,32 @@ h3 {
 }
 
 .profile-avatar-wrap {
-    width: min(230px, 72vw);
+    width: clamp(140px, 44vw, 180px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(145deg, var(--royal-blue), var(--warm-sand));
-    box-shadow: 0 20px 38px rgba(42, 110, 243, 0.25);
-    transition: transform 320ms ease-in-out, box-shadow 320ms ease-in-out;
+    padding: 5px;
+    background: linear-gradient(150deg, rgba(42, 110, 243, 0.98), rgba(42, 110, 243, 0.45));
+    box-shadow: 0 16px 34px rgba(42, 110, 243, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    opacity: 0;
+    animation: avatarFadeIn 820ms ease 120ms forwards;
 }
 
 .profile-avatar {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center center;
     background: #f8fbff;
     border: 3px solid rgba(255, 255, 255, 0.8);
 }
 
 .profile-card:hover .profile-avatar-wrap {
-    transform: scale(1.03);
-    box-shadow: 0 24px 45px rgba(42, 110, 243, 0.35);
+    transform: scale(1.05);
+    box-shadow: 0 24px 48px rgba(42, 110, 243, 0.32);
+    filter: drop-shadow(0 0 14px rgba(42, 110, 243, 0.28));
 }
 
 .profile-meta {
@@ -923,6 +928,17 @@ h3 {
     }
 }
 
+@keyframes avatarFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 @media (max-width: 767px) {
     :root {
         --space-xl: 3.1rem;
@@ -995,6 +1011,10 @@ h3 {
         align-content: center;
         text-align: left;
         justify-items: start;
+    }
+
+    .profile-avatar-wrap {
+        width: clamp(220px, 24vw, 256px);
     }
 
     .hero-content {
