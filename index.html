@@ -1,193 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil Jirapure - Portfolio</title>
+    <meta name="description" content="Portfolio of a Full Stack Java Developer focused on scalable systems and practical problem-solving.">
+    <title>Portfolio | Full Stack Java Developer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-ring"></div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#home" class="nav-logo">Sahil Jirapure</a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
 
-    <header id="home" class="hero">
-        <div class="container">
-            <h1>SAHIL JIRAPURE</h1>
-            <p class="subtitle">B.Tech Information Technology Student</p>
-            <p class="tagline">Passionate about building practical solutions through technology
-                and hands-on projects.</p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+    <header class="site-header" id="home">
+        <div class="container nav-wrap glass">
+            <a class="brand" href="#home">Portfolio</a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#certifications">Proof</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="profile-text">
-                        <h3>Profile</h3>
-                        <p>Aspiring IT professional currently pursuing BTech in Information Technology at MIT ADT
-                            University, with a strong foundation in core technical subjects such as programming, data
-                            structures, web development, and database management.</p>
-                        <p>Passionate about building practical solutions through academic learning and hands-on
-                            projects. Currently engaged in developing personal and academic projects that showcase
-                            creativity, problem-solving, and teamwork.</p>
-                        <p>Eager to gain real-world experience through internships and collaborative opportunities while
-                            continuously upskilling in modern technologies.</p>
+        <section class="hero section" aria-label="Hero section">
+            <div class="container hero-grid">
+                <aside class="profile-card glass reveal" aria-label="Profile summary">
+                    <div class="profile-avatar-wrap">
+                        <img class="profile-avatar" src="assets/profile-sahil.svg" alt="Profile photo of Sahil Jirapure" loading="lazy" decoding="async" width="420" height="420">
                     </div>
-                    <div class="hobbies-text">
-                        <h3>Hobbies</h3>
-                        <p>I Have a keen interest in reading and painting, which help enhance creativity and focus.</p>
+                    <div class="profile-meta">
+                        <p class="profile-name"><i class="fa-regular fa-user" aria-hidden="true"></i>Sahil Jirapure</p>
+                        <p class="profile-role">Full Stack Developer | Java & AI Enthusiast</p>
+                    </div>
+                </aside>
+
+                <div class="hero-content reveal delay-1">
+                    <p class="eyebrow">Full Stack Engineering</p>
+                    <h1>Full Stack Java Developer | Building Scalable Systems</h1>
+                    <p class="value-statement">BTech developer building real-world Java and full-stack systems with strong DSA fundamentals, security-first thinking, and measurable product impact.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#projects">View Projects</a>
+                        <a class="btn btn-ghost" href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a class="btn btn-ghost" href="#contact">Contact</a>
                     </div>
                 </div>
+
+                <aside class="hero-panel glass reveal delay-2" aria-label="Key highlights">
+                    <h2>What I Deliver</h2>
+                    <ul>
+                        <li>Scalable backend APIs in Java</li>
+                        <li>Production-ready frontend interfaces</li>
+                        <li>Secure and testable workflows</li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
-        <section id="projects" class="section bg-light">
+        <section id="about" class="section">
             <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Queue Management System</h3>
-                        <p>Built a hospital queueing system using Java and MySQL to manage patient flow efficiently.</p>
+                <div class="section-head reveal">
+                    <p class="kicker">About</p>
+                    <h2>Engineering mindset with product impact</h2>
+                </div>
+                <div class="about-layout">
+                    <div class="about-card glass reveal delay-1">
+                        <p>I am a BTech student building production-minded software with a strong foundation in Java, DSA, and full-stack development. My work focuses on designing systems that solve concrete problems, from misinformation detection to decentralized communication and scalable web platforms.</p>
+                        <p>I have built AI/ML and distributed projects including a Fake News Detection System, Bit-Chats (BLE + Tor), FitSync (MERN), and EduStake. I approach engineering with a practical mindset: clear architecture, secure implementation, measurable outcomes, and maintainable code.</p>
+                        <p>My current training in Automation Testing, Fundamentals of AI, DevOps, and Application Security strengthens how I build and ship reliable systems ready for industry execution.</p>
                     </div>
-                    <div class="project-card">
-                        <h3>College Resource Sharing Platform</h3>
-                        <p>A web platform for students to upload, share, and download academic resources like notes and
-                            study materials.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Event Management System</h3>
-                        <p>Java-based project designed to manage and organize college events with features for user
-                            login, event listing, and registration.</p>
-                    </div>
+
+                    <aside class="education-card glass reveal delay-2" aria-label="Education details">
+                        <p class="education-kicker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</p>
+                        <h3>MIT ADT University</h3>
+                        <p>B.Tech in Information Technology (2023 - 2027)</p>
+                        <p class="education-year"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Passing Year: 2027</p>
+                    </aside>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section">
             <div class="container">
-                <h2>Skills & Languages</h2>
-                <div class="skills-container">
-                    <div class="skills-list">
-                        <h3>Technical Skills</h3>
-                        <ul>
-                            <li><i class="fa-solid fa-code"></i> C Programming</li>
-                            <li><i class="fa-solid fa-code"></i> C++</li>
-                            <li><i class="fa-brands fa-html5"></i> HTML</li>
-                            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                            <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
-                            <li><i class="fa-solid fa-lightbulb"></i> Problem Solving</li>
+                <div class="section-head reveal">
+                    <p class="kicker">Skills</p>
+                    <h2>Tools and strengths used in delivery</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card glass reveal">
+                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                        <div class="meter">
+                            <div class="meter-label"><span>Java</span><span>90%</span></div>
+                            <div class="meter-track"><div class="meter-fill" style="--fill: 90%"></div></div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-label"><span>JavaScript</span><span>85%</span></div>
+                            <div class="meter-track"><div class="meter-fill" style="--fill: 85%"></div></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card glass reveal delay-1">
+                        <h3><i class="fa-solid fa-brain"></i> DSA & Problem Solving</h3>
+                        <div class="meter">
+                            <div class="meter-label"><span>Data Structures</span><span>88%</span></div>
+                            <div class="meter-track"><div class="meter-fill" style="--fill: 88%"></div></div>
+                        </div>
+                        <div class="meter">
+                            <div class="meter-label"><span>Algorithmic Thinking</span><span>84%</span></div>
+                            <div class="meter-track"><div class="meter-fill" style="--fill: 84%"></div></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card glass reveal delay-2">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Subjects</h3>
+                        <ul class="chip-list">
+                            <li>Automation Testing</li>
+                            <li>Fundamentals of AI</li>
+                            <li>DevOps</li>
+                            <li>Application Security</li>
                         </ul>
-                    </div>
-                    <div class="skills-list">
-                        <h3>Languages</h3>
-                        <ul>
-                            <li><i class="fa-solid fa-comments"></i> English (Fluent)</li>
-                            <li><i class="fa-solid fa-comments"></i> Marathi (Fluent)</li>
-                            <li><i class="fa-solid fa-comments"></i> Hindi (Fluent)</li>
-                            <li><i class="fa-solid fa-language"></i> German (Basics)</li>
-                            <li><i class="fa-solid fa-language"></i> Spanish (Intermediate)</li>
+                    </article>
+
+                    <article class="skill-card glass reveal delay-3">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+                        <ul class="chip-list">
+                            <li><i class="fa-brands fa-git-alt"></i> Git</li>
+                            <li><i class="fa-solid fa-code"></i> VS Code</li>
                         </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section bg-light">
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Education & Courses</h2>
-                <div class="education-item">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> MIT ADT UNIVERSITY (2023 – 2027)</h3>
-                    <p>Bachelor of Technology in Information technology</p>
-                    <p><strong>Current CGPA:</strong> 7.55</p>
+                <div class="section-head reveal">
+                    <p class="kicker">Projects</p>
+                    <h2>Featured Engineering Projects</h2>
+                    <p class="project-section-intro">A curated set of full-stack and AI solutions focused on measurable impact, reliability, and real-world usability.</p>
                 </div>
+                <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+            </div>
+        </section>
 
-                <h3><i class="fa-solid fa-certificate"></i> Courses</h3>
-                <div class="courses-grid">
-                    <div class="course-card">
-                        <h4>Computational Thinking for Problem Solving</h4>
-                        <p>Penn University of Pennsylvania (DECEMBER 2023)</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>C Programming</h4>
-                        <p>Spoken Tutorial Project, IIT Bombay (JANUARY 2024)</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>Programming Essentials in C++</h4>
-                        <p>C++ Institute Authorized Academy Program (APRIL 2024)</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>Python 3.4.3</h4>
-                        <p>Spoken Tutorial Project, IIT Bombay (NOVEMBER 2024)</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>Backend Development and API Creation</h4>
-                        <p>An online non-credit course authorized by Packt and offered through Coursera</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>Developing Back-End Apps with Node.js and Express</h4>
-                        <p>an online non-credit course authorized by IBM and offered through Coursera</p>
-                    </div>
-                    <div class="course-card">
-                        <h4>JavaScript Full Stack Capstone Project</h4>
-                        <p>an online non-credit course authorized by IBM and offered through Coursera</p>
-                    </div>
+        <section id="certifications" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="kicker">Proof</p>
+                    <h2>Certifications & Verified Learning</h2>
+                    <p class="project-section-intro">Industry-aligned certifications validating backend engineering, data analytics, automation testing, Python, and DevOps fundamentals.</p>
                 </div>
+                <div class="cert-grid" id="certGrid" aria-live="polite"></div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="container text-center">
-                <h2>Get In Touch</h2>
-                <p class="contact-subtitle">I'm open to new opportunities and collaborations. Feel free to reach out!
-                </p>
-                <div class="contact-details">
-                    <p><i class="fa-solid fa-envelope"></i> <a
-                            href="mailto:sahiljirapure8@gmail.com">sahiljirapure8@gmail.com</a></p>
-                    <p><i class="fa-solid fa-phone"></i> +91 8888955675</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India - 412201</p>
-                    <p><a href="https://www.instagram.com/sahi_jirapure?igsh=MTIwYXhwNnA1Nzlvag==">🅾 Instagram - @sahil7751</a></p>
-                    <p><a href="https://www.linkedin.com/in/sahil-jirapure">[in] linkedin - @sahiljirapure</a></p>
-                    <p><a href="https://github.com/sahil7751">🤖 GitHub - @sahil-jirapure</a></p>
+            <div class="container contact-layout">
+                <div class="contact-intro reveal">
+                    <p class="kicker">Contact</p>
+                    <h2>Let’s build something meaningful</h2>
+                    <p>I am open to full-time opportunities, internships, and project collaborations.</p>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/sahil-jirapure" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="mailto:sahiljirapure8@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                    </ul>
                 </div>
+
+                <form class="contact-form glass reveal delay-1" id="contactForm" novalidate>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                    <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2025 Sahil Jirapure. All rights reserved.</p>
+            <p>&copy; 2026 Sahil Jirapure. Crafted with clean UI and scalable frontend practices.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
