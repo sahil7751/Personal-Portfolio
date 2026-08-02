@@ -1,217 +1,1486 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a Full Stack Java Developer focused on scalable systems and practical problem-solving.">
-    <title>Portfolio | Full Stack Java Developer</title>
+
+    <meta name="description"
+        content="Portfolio of Sahil Jirapure - Java Full Stack Developer and AI/ML enthusiast building applications using Spring Boot, React, Python, Machine Learning and Docker.">
+
+    <meta name="keywords"
+        content="Sahil Jirapure, Java Developer, Spring Boot Developer, Full Stack Developer, AI Engineer, Machine Learning, React Developer">
+
+    <meta name="author" content="Sahil Jirapure">
+
+    <title>
+        Sahil Jirapure | Java Full Stack Developer & AI/ML
+    </title>
+
+
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- CSS -->
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
+
+
+    <!-- ========================================
+     PAGE LOADER
+========================================= -->
+
     <div class="page-loader" id="pageLoader" aria-hidden="true">
+
         <div class="loader-ring"></div>
+
     </div>
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true">
+    </div>
+
 
     <div class="bg-orb orb-one"></div>
     <div class="bg-orb orb-two"></div>
 
+
+
+    <!-- ========================================
+     NAVBAR
+========================================= -->
+
     <header class="site-header" id="home">
+
         <div class="container nav-wrap glass">
-            <a class="brand" href="#home">Portfolio</a>
-            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+
+
+            <!-- BRAND -->
+
+            <a class="brand" href="#home">
+
+                Sahil<span>.</span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navMenu">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
-            <nav>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav aria-label="Main navigation">
+
                 <ul class="nav-menu" id="navMenu">
-                    <li><a class="nav-link" href="#home">Home</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#skills">Skills</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#certifications">Proof</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
+
+                    <li>
+                        <a class="nav-link" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#education">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#certifications">
+                            Certifications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#coding">
+                            Coding
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
+
         </div>
+
     </header>
 
+
+
     <main>
-        <section class="hero section" aria-label="Hero section">
+
+
+        <!-- ========================================
+     HERO
+========================================= -->
+
+        <section class="hero section" aria-label="Introduction">
+
             <div class="container hero-grid">
+
+
+                <!-- PROFILE CARD -->
+
                 <aside class="profile-card glass reveal" aria-label="Profile summary">
+
+
                     <div class="profile-avatar-wrap">
-                        <img class="profile-avatar" src="assets/profile-pic.jpeg" alt="Sahil Jirapure profile photo" loading="lazy" decoding="async" width="256" height="256">
+
+                        <img class="profile-avatar" src="assets/profile-pic.jpeg" alt="Sahil Jirapure" width="256"
+                            height="256">
+
                     </div>
+
+
                     <div class="profile-meta">
-                        <p class="profile-name"><i class="fa-regular fa-user" aria-hidden="true"></i>Sahil Jirapure</p>
-                        <p class="profile-role">Full Stack Developer | Java & AI Enthusiast</p>
+
+                        <p class="profile-name">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Sahil Jirapure
+
+                        </p>
+
+
+                        <p class="profile-role">
+
+                            Java Full Stack Developer
+
+                        </p>
+
+
+                        <p class="profile-location">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Pune, India
+
+                        </p>
+
                     </div>
+
+
+                    <div class="availability-badge">
+
+                        <span class="availability-dot"></span>
+
+                        Open to Internships
+
+                    </div>
+
                 </aside>
+
+
+
+                <!-- HERO CONTENT -->
 
                 <div class="hero-content reveal delay-1">
-                    <p class="eyebrow">Full Stack Engineering</p>
-                    <h1>Full Stack Java Developer | Building Scalable Systems</h1>
-                    <p class="value-statement">BTech developer building real-world Java and full-stack systems with strong DSA fundamentals, security-first thinking, and measurable product impact.</p>
+
+
+                    <p class="eyebrow">
+
+                        JAVA • FULL STACK • AI / ML
+
+                    </p>
+
+
+                    <h1>
+
+                        Hi, I'm
+                        <span class="name-highlight">
+                            Sahil Jirapure
+                        </span>
+
+                        <span class="hero-highlight">
+
+                            Java Full Stack Developer
+                            <br>
+                            & AI/ML Enthusiast
+
+                        </span>
+
+                    </h1>
+
+
+                    <p class="value-statement">
+
+                        I build full-stack and AI-powered applications
+                        using
+
+                        <strong>
+                            Java, Spring Boot, React, Python,
+                            Machine Learning and Docker.
+                        </strong>
+
+                        My work includes secure REST APIs,
+                        real-time systems, NLP classifiers and
+                        machine-learning prediction platforms.
+
+                    </p>
+
+
+
+                    <!-- CTA BUTTONS -->
+
                     <div class="hero-cta">
-                        <a class="btn btn-primary" href="#projects">View Projects</a>
-                        <a class="btn btn-ghost" href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a class="btn btn-ghost" href="#contact">Contact</a>
+
+
+                        <a class="btn btn-primary" href="#projects">
+
+                            <i class="fa-solid fa-code"></i>
+
+                            View Projects
+
+                        </a>
+
+
+
+                        <!-- RESUME -->
+
+                    <a class="btn btn-resume" href="assets/Jirapure_Sahil_Resume_FINAL.pdf" target="_blank" rel="noopener noreferrer">
+                    
+                        <i class="fa-solid fa-file-pdf"></i>
+                        View Resume
+                    
+                    </a>
+
+
+
+                        <!-- GITHUB -->
+
+                        <a class="btn btn-ghost" href="https://github.com/sahil7751" target="_blank"
+                            rel="noopener noreferrer">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            GitHub
+
+                        </a>
+
                     </div>
+
+
+
+                    <!-- QUICK TECHNOLOGIES -->
+
+                    <div class="hero-tech">
+
+                        <span>
+                            <i class="fa-brands fa-java"></i>
+                            Java
+                        </span>
+
+                        <span>
+                            Spring Boot
+                        </span>
+
+                        <span>
+                            <i class="fa-brands fa-react"></i>
+                            React
+                        </span>
+
+                        <span>
+                            <i class="fa-brands fa-python"></i>
+                            Python
+                        </span>
+
+                        <span>
+                            AI / ML
+                        </span>
+
+                        <span>
+                            <i class="fa-brands fa-docker"></i>
+                            Docker
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <aside class="hero-panel glass reveal delay-2" aria-label="Key highlights">
-                    <h2>What I Deliver</h2>
-                    <ul>
-                        <li>Scalable backend APIs in Java</li>
-                        <li>Production-ready frontend interfaces</li>
-                        <li>Secure and testable workflows</li>
-                    </ul>
+
+
+                <!-- HERO PROOF PANEL -->
+
+                <aside class="hero-panel glass reveal delay-2" aria-label="Engineering highlights">
+
+
+                    <p class="panel-label">
+
+                        ENGINEERING HIGHLIGHTS
+
+                    </p>
+
+
+                    <div class="hero-stat">
+
+                        <strong>30+</strong>
+
+                        <span>
+                            REST APIs Built
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>97%</strong>
+
+                        <span>
+                            NLP Model Accuracy
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>&lt;200ms</strong>
+
+                        <span>
+                            Real-Time Message Delivery
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>20K+</strong>
+
+                        <span>
+                            Articles Used for NLP Training
+                        </span>
+
+                    </div>
+
                 </aside>
+
             </div>
+
         </section>
+
+
+
+        <!-- ========================================
+     ABOUT
+========================================= -->
 
         <section id="about" class="section">
+
             <div class="container">
+
+
                 <div class="section-head reveal">
-                    <p class="kicker">About</p>
-                    <h2>Engineering mindset with product impact</h2>
+
+                    <p class="kicker">
+
+                        ABOUT ME
+
+                    </p>
+
+
+                    <h2>
+
+                        Building software that combines
+                        engineering with intelligent systems
+
+                    </h2>
+
                 </div>
+
+
+
                 <div class="about-layout">
+
+
                     <div class="about-card glass reveal delay-1">
-                        <p>I am a BTech student building production-minded software with a strong foundation in Java, DSA, and full-stack development. My work focuses on designing systems that solve concrete problems, from misinformation detection to decentralized communication and scalable web platforms.</p>
-                        <p>I have built AI/ML and distributed projects including a Fake News Detection System, Bit-Chats (BLE + Tor), FitSync (MERN), and EduStake. I approach engineering with a practical mindset: clear architecture, secure implementation, measurable outcomes, and maintainable code.</p>
-                        <p>My current training in Automation Testing, Fundamentals of AI, DevOps, and Application Security strengthens how I build and ship reliable systems ready for industry execution.</p>
+
+
+                        <p>
+
+                            I'm a B.Tech Information Technology student
+                            at MIT ADT University, Pune, graduating in
+                            June 2027.
+
+                        </p>
+
+
+                        <p>
+
+                            My core development stack includes
+
+                            <strong>
+                                Java, Spring Boot, React,
+                                MySQL and Docker
+                            </strong>,
+
+                            while my AI/ML work includes
+
+                            <strong>
+                                Python, Scikit-learn, XGBoost,
+                                NLP and data analysis.
+                            </strong>
+
+                        </p>
+
+
+                        <p>
+
+                            I enjoy developing complete systems rather
+                            than isolated features — from database
+                            design and REST APIs to authentication,
+                            frontend integration, containerization and
+                            AI-powered functionality.
+
+                        </p>
+
+
+                        <p>
+
+                            My projects include an AI-powered interview
+                            preparation platform, a real-time messaging
+                            application, employee attrition prediction,
+                            fake-news detection and several
+                            Spring Boot applications.
+
+                        </p>
+
                     </div>
 
-                    <aside class="education-card glass reveal delay-2" aria-label="Education details">
-                        <p class="education-kicker"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</p>
-                        <h3>MIT ADT University</h3>
-                        <p>B.Tech in Information Technology (2023 - 2027)</p>
-                        <p class="education-year"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Passing Year: 2027</p>
+
+
+                    <!-- PROFILE DETAILS -->
+
+                    <aside class="education-card glass reveal delay-2">
+
+
+                        <p class="education-kicker">
+
+                            <i class="fa-solid fa-user-graduate"></i>
+
+                            Developer Profile
+
+                        </p>
+
+
+
+                        <div class="profile-fact">
+
+                            <span>Degree</span>
+
+                            <strong>
+                                B.Tech IT
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-fact">
+
+                            <span>University</span>
+
+                            <strong>
+                                MIT ADT University
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-fact">
+
+                            <span>Graduation</span>
+
+                            <strong>
+                                June 2027
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-fact">
+
+                            <span>CGPA</span>
+
+                            <strong>
+                                7.75
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-fact">
+
+                            <span>Primary Stack</span>
+
+                            <strong>
+                                Java + Spring Boot
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-fact">
+
+                            <span>Interested In</span>
+
+                            <strong>
+                                Software Engineering & AI
+                            </strong>
+
+                        </div>
+
                     </aside>
+
                 </div>
+
             </div>
+
         </section>
+
+
+
+        <!-- ========================================
+     TECHNICAL SKILLS
+========================================= -->
 
         <section id="skills" class="section">
+
             <div class="container">
+
+
                 <div class="section-head reveal">
-                    <p class="kicker">Skills</p>
-                    <h2>Tools and strengths used in delivery</h2>
+
+                    <p class="kicker">
+                        TECH STACK
+                    </p>
+
+                    <h2>
+                        Technologies I work with
+                    </h2>
+
+                    <p class="section-description">
+
+                        Technologies I've used across
+                        full-stack, backend and machine-learning
+                        projects.
+
+                    </p>
+
                 </div>
+
+
 
                 <div class="skills-grid">
+
+
+                    <!-- LANGUAGES -->
+
                     <article class="skill-card glass reveal">
-                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                        <div class="meter">
-                            <div class="meter-label"><span>Java</span><span>90%</span></div>
-                            <div class="meter-track"><div class="meter-fill" style="--fill: 90%"></div></div>
-                        </div>
-                        <div class="meter">
-                            <div class="meter-label"><span>JavaScript</span><span>85%</span></div>
-                            <div class="meter-track"><div class="meter-fill" style="--fill: 85%"></div></div>
-                        </div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-code"></i>
+
+                            Languages
+
+                        </h3>
+
+
+                        <ul class="chip-list">
+
+                            <li>
+                                <i class="fa-brands fa-java"></i>
+                                Java
+                            </li>
+
+                            <li>
+                                <i class="fa-brands fa-python"></i>
+                                Python
+                            </li>
+
+                            <li>
+                                <i class="fa-brands fa-js"></i>
+                                JavaScript
+                            </li>
+
+                            <li>
+                                SQL
+                            </li>
+
+                        </ul>
+
                     </article>
+
+
+
+                    <!-- BACKEND -->
 
                     <article class="skill-card glass reveal delay-1">
-                        <h3><i class="fa-solid fa-brain"></i> DSA & Problem Solving</h3>
-                        <div class="meter">
-                            <div class="meter-label"><span>Data Structures</span><span>88%</span></div>
-                            <div class="meter-track"><div class="meter-fill" style="--fill: 88%"></div></div>
-                        </div>
-                        <div class="meter">
-                            <div class="meter-label"><span>Algorithmic Thinking</span><span>84%</span></div>
-                            <div class="meter-track"><div class="meter-fill" style="--fill: 84%"></div></div>
-                        </div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-server"></i>
+
+                            Backend
+
+                        </h3>
+
+
+                        <ul class="chip-list">
+
+                            <li>Spring Boot</li>
+
+                            <li>Flask</li>
+
+                            <li>REST APIs</li>
+
+                            <li>WebSockets</li>
+
+                            <li>JWT Authentication</li>
+
+                            <li>Microservices</li>
+
+                        </ul>
+
                     </article>
+
+
+
+                    <!-- AI ML -->
 
                     <article class="skill-card glass reveal delay-2">
-                        <h3><i class="fa-solid fa-graduation-cap"></i> Subjects</h3>
+
+                        <h3>
+
+                            <i class="fa-solid fa-brain"></i>
+
+                            AI / Machine Learning
+
+                        </h3>
+
+
                         <ul class="chip-list">
-                            <li>Automation Testing</li>
-                            <li>Fundamentals of AI</li>
-                            <li>DevOps</li>
-                            <li>Application Security</li>
+
+                            <li>Machine Learning</li>
+
+                            <li>Scikit-learn</li>
+
+                            <li>XGBoost</li>
+
+                            <li>NLP</li>
+
+                            <li>TF-IDF</li>
+
+                            <li>Pandas</li>
+
+                            <li>NumPy</li>
+
+                            <li>Matplotlib</li>
+
                         </ul>
+
                     </article>
 
-                    <article class="skill-card glass reveal delay-3">
-                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+
+
+                    <!-- FRONTEND -->
+
+                    <article class="skill-card glass reveal">
+
+                        <h3>
+
+                            <i class="fa-solid fa-laptop-code"></i>
+
+                            Frontend
+
+                        </h3>
+
+
                         <ul class="chip-list">
-                            <li><i class="fa-brands fa-git-alt"></i> Git</li>
-                            <li><i class="fa-solid fa-code"></i> VS Code</li>
+
+                            <li>
+                                <i class="fa-brands fa-react"></i>
+                                React.js
+                            </li>
+
+                            <li>HTML</li>
+
+                            <li>CSS</li>
+
+                            <li>Responsive UI</li>
+
                         </ul>
+
                     </article>
+
+
+
+                    <!-- DATABASE -->
+
+                    <article class="skill-card glass reveal delay-1">
+
+                        <h3>
+
+                            <i class="fa-solid fa-database"></i>
+
+                            Databases
+
+                        </h3>
+
+
+                        <ul class="chip-list">
+
+                            <li>MySQL</li>
+
+                            <li>PostgreSQL</li>
+
+                            <li>MongoDB</li>
+
+                            <li>Supabase</li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- DEVOPS -->
+
+                    <article class="skill-card glass reveal delay-2">
+
+                        <h3>
+
+                            <i class="fa-solid fa-cloud"></i>
+
+                            DevOps & Tools
+
+                        </h3>
+
+
+                        <ul class="chip-list">
+
+                            <li>
+                                <i class="fa-brands fa-docker"></i>
+                                Docker
+                            </li>
+
+                            <li>
+                                <i class="fa-brands fa-git-alt"></i>
+                                Git
+                            </li>
+
+                            <li>
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </li>
+
+                            <li>
+                                <i class="fa-brands fa-aws"></i>
+                                AWS
+                            </li>
+
+                            <li>Model Deployment</li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- CORE CS -->
+
+                    <article class="skill-card glass reveal">
+
+                        <h3>
+
+                            <i class="fa-solid fa-cubes"></i>
+
+                            Computer Science
+
+                        </h3>
+
+
+                        <ul class="chip-list">
+
+                            <li>Data Structures</li>
+
+                            <li>Algorithms</li>
+
+                            <li>OOP</li>
+
+                            <li>System Design</li>
+
+                            <li>Problem Solving</li>
+
+                            <li>Agile / Scrum</li>
+
+                        </ul>
+
+                    </article>
+
                 </div>
+
             </div>
+
         </section>
+
+
+
+        <!-- ========================================
+     FEATURED PROJECTS
+========================================= -->
 
         <section id="projects" class="section">
+
             <div class="container">
+
+
                 <div class="section-head reveal">
-                    <p class="kicker">Projects</p>
-                    <h2>Featured Engineering Projects</h2>
-                    <p class="project-section-intro">A curated set of full-stack and AI solutions focused on measurable impact, reliability, and real-world usability.</p>
+
+                    <p class="kicker">
+
+                        FEATURED WORK
+
+                    </p>
+
+
+                    <h2>
+
+                        Projects that demonstrate what I can build
+
+                    </h2>
+
+
+                    <p class="project-section-intro">
+
+                        Selected full-stack and AI projects demonstrating
+                        backend engineering, machine learning,
+                        authentication, real-time communication and
+                        deployment.
+
+                    </p>
+
                 </div>
-                <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+
+
+                <!-- GENERATED FROM SCRIPT.JS -->
+
+                <div class="project-grid" id="projectGrid" aria-live="polite">
+                </div>
+
+
+                <div class="all-projects-action">
+
+                    <a class="btn btn-ghost" href="https://github.com/sahil7751" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        Explore More on GitHub
+
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
+
+
+
+        <!-- ========================================
+     EDUCATION
+========================================= -->
+
+        <section id="education" class="section">
+
+            <div class="container">
+
+
+                <div class="section-head reveal">
+
+                    <p class="kicker">
+
+                        EDUCATION
+
+                    </p>
+
+
+                    <h2>
+
+                        Academic Background
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="education-main-card glass reveal">
+
+
+                    <div class="education-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <div class="education-main-content">
+
+
+                        <p class="education-date">
+
+                            2023 — 2027
+
+                        </p>
+
+
+                        <h3>
+
+                            Bachelor of Technology
+                            in Information Technology
+
+                        </h3>
+
+
+                        <p class="education-university">
+
+                            MIT ADT University, Pune
+
+                        </p>
+
+
+                        <div class="education-meta">
+
+                            <span>
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                                CGPA: 7.75
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                Expected Graduation:
+                                June 2027
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="education-description">
+
+                            Building a foundation in algorithms,
+                            software engineering, databases,
+                            artificial intelligence, application
+                            security, DevOps and full-stack development.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+     CERTIFICATIONS
+========================================= -->
 
         <section id="certifications" class="section">
+
             <div class="container">
+
+
                 <div class="section-head reveal">
-                    <p class="kicker">Proof</p>
-                    <h2>Certifications & Verified Learning</h2>
-                    <p class="project-section-intro">Industry-aligned certifications validating backend engineering, data analytics, automation testing, Python, and DevOps fundamentals.</p>
+
+                    <p class="kicker">
+
+                        CERTIFICATIONS
+
+                    </p>
+
+
+                    <h2>
+
+                        Verified Learning
+
+                    </h2>
+
+
+                    <p class="project-section-intro">
+
+                        Selected certifications supporting my
+                        algorithms, problem-solving and
+                        computer-science fundamentals.
+
+                    </p>
+
                 </div>
-                <div class="cert-grid" id="certGrid" aria-live="polite"></div>
+
+
+                <!-- GENERATED FROM SCRIPT.JS -->
+
+                <div class="cert-grid" id="certGrid" aria-live="polite">
+                </div>
+
             </div>
+
         </section>
+
+        <!-- ========================================
+             CODING PROFILES
+        ========================================= -->
+
+        <section id="coding" class="section">
+
+            <div class="container">
+
+                <div class="section-head reveal">
+
+                    <p class="kicker">
+                        DEVELOPER ACTIVITY
+                    </p>
+
+                    <h2>
+                        Coding Profiles & Activity
+                    </h2>
+
+                    <p class="section-description">
+                        My development activity, source code and
+                        problem-solving profiles.
+                    </p>
+
+                </div>
+
+
+                <div class="coding-grid">
+
+
+                    <!-- GITHUB -->
+
+                    <a class="coding-card glass reveal" href="https://github.com/sahil7751" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <div class="coding-icon">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </div>
+
+                        <div class="coding-content">
+
+                            <span class="coding-platform">
+                                GitHub
+                            </span>
+
+                            <strong>
+                                500+ Commits
+                            </strong>
+
+                            <p>
+                                Full-stack, Java, Spring Boot,
+                                AI/ML and web-development projects.
+                            </p>
+
+                            <span class="profile-link">
+                                View GitHub
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- LEETCODE -->
+
+                    <a class="coding-card glass reveal delay-1" href="https://leetcode.com/u/Sahil7751/" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <div class="coding-icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <div class="coding-content">
+
+                            <span class="coding-platform">
+                                LeetCode
+                            </span>
+
+                            <strong>
+                                Global Rank: 2,543,187
+                            </strong>
+
+                            <p>
+                                Practicing data structures,
+                                algorithms and coding interview problems.
+                            </p>
+
+                            <span class="profile-link">
+                                View LeetCode
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- HACKERRANK -->
+
+                    <a class="coding-card glass reveal delay-2" href="https://www.hackerrank.com/profile/sahiljirapure8"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="coding-icon">
+
+                            <i class="fa-brands fa-hackerrank"></i>
+
+                        </div>
+
+                        <div class="coding-content">
+
+                            <span class="coding-platform">
+                                HackerRank
+                            </span>
+
+                            <strong>
+                                Problem Solving
+                            </strong>
+
+                            <p>
+                                Programming and problem-solving
+                                practice.
+                            </p>
+
+                            <span class="profile-link">
+                                View HackerRank
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+     CONTACT
+========================================= -->
 
         <section id="contact" class="section">
+
             <div class="container contact-layout">
+
+
+                <!-- CONTACT INFORMATION -->
+
                 <div class="contact-intro reveal">
-                    <p class="kicker">Contact</p>
-                    <h2>Let’s build something meaningful</h2>
-                    <p>I am open to full-time opportunities, internships, and project collaborations.</p>
-                    <ul class="social-links">
-                        <li><a href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/sahil-jirapure" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="mailto:sahiljirapure8@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
-                    </ul>
+
+
+                    <p class="kicker">
+
+                        CONTACT
+
+                    </p>
+
+
+                    <h2>
+
+                        Let's build something useful
+
+                    </h2>
+                    <p>
+
+                        I'm currently open to internship and
+                        software engineering opportunities involving
+                        Java, full-stack development, backend engineering,
+                        AI or machine learning.
+
+                    </p>
+
+
+
+<ul class="social-links">
+
+    <li>
+        <a href="mailto:sahiljirapure8@gmail.com">
+
+            <i class="fa-solid fa-envelope"></i>
+            Email
+
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-github"></i>
+            GitHub
+
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://www.linkedin.com/in/sahil-jirapure" target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://leetcode.com/u/Sahil7751/" target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-solid fa-code"></i>
+            LeetCode
+
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://www.hackerrank.com/profile/sahiljirapure8" target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-hackerrank"></i>
+            HackerRank
+
+        </a>
+    </li>
+
+</ul>
+
                 </div>
 
+
+
+                <!-- CONTACT FORM -->
+
                 <form class="contact-form glass reveal delay-1" id="contactForm" novalidate>
-                    <label for="name">Name</label>
+
+
+                    <div class="form-heading">
+
+                        <h3>
+
+                            Send me a message
+
+                        </h3>
+
+                        <p>
+
+                            Have an opportunity or project in mind?
+                            Feel free to reach out.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <label for="name">
+
+                        Name
+
+                    </label>
+
+
                     <input id="name" name="name" type="text" placeholder="Your name" required>
 
-                    <label for="email">Email</label>
+
+
+                    <label for="email">
+
+                        Email
+
+                    </label>
+
+
                     <input id="email" name="email" type="email" placeholder="you@example.com" required>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
 
-                    <button class="btn btn-primary" type="submit">Send Message</button>
-                    <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+
+                    <label for="message">
+
+                        Message
+
+                    </label>
+
+
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+                        required></textarea>
+
+
+
+                    <button class="btn btn-primary" type="submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+
+                    <p class="form-feedback" id="formFeedback" role="status" aria-live="polite">
+                    </p>
+
                 </form>
+
             </div>
+
         </section>
+
+
     </main>
 
+
+
+    <!-- ========================================
+     FOOTER
+========================================= -->
+
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Sahil Jirapure. Crafted with clean UI and scalable frontend practices.</p>
+
+        <div class="container footer-content">
+
+
+            <div>
+
+                <strong>
+
+                    Sahil Jirapure
+
+                </strong>
+
+                <p>
+
+                    Java Full Stack Developer
+                    • AI/ML Enthusiast
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-socials">
+
+
+                <a href="https://github.com/sahil7751" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/sahil-jirapure" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <p>
+
+                &copy; 2026 Sahil Jirapure.
+
+            </p>
+
         </div>
+
     </footer>
 
+
+
     <script src="script.js"></script>
+
+
 </body>
+
 </html>
