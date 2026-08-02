@@ -1,392 +1,1024 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const certifications = [
-        {
-            title: "Backend Development and API Creation",
-            issuer: "Packt (Coursera)",
-            issuerIcon: "fa-solid fa-book-open",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/AMYIRT7V9DNG"
-        },
-        {
-            title: "Introduction to Data Analytics",
-            issuer: "IBM (Coursera)",
-            issuerIcon: "fa-brands fa-ibm",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/G3O4VEW5RT68"
-        },
-        {
-            title: "Crash Course on Python",
-            issuer: "Google (Coursera)",
-            issuerIcon: "fa-brands fa-google",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/1EUZVA394Z6R"
-        },
-        {
-            title: "Create Your First Automation Script Using Selenium and Java",
-            issuer: "Coursera",
-            issuerIcon: "fa-solid fa-award",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/HCRDDIAT2LPP"
-        },
-        {
-            title: "Developing Back-End Apps with Node.js and Express",
-            issuer: "IBM (Coursera)",
-            issuerIcon: "fa-brands fa-ibm",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/GRFUB51NMEWA"
-        },
-        {
-            title: "DevOps Prerequisite Course",
-            issuer: "KodeKloud (Coursera)",
-            issuerIcon: "fa-solid fa-cloud",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/PAW51S39JW65"
-        },
-        {
-            title: "Introduction to Selenium",
-            issuer: "Coursera",
-            issuerIcon: "fa-solid fa-vial-circle-check",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/TJ3C4D05YQJR"
-        },
-        {
-            title: "JavaScript Full Stack Capstone Project",
-            issuer: "IBM (Coursera)",
-            issuerIcon: "fa-brands fa-ibm",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/A6NLIV7EAO0F"
-        },
-        {
-            title: "Node.js & MongoDB: Developing Backend Database Applications",
-            issuer: "IBM (Coursera)",
-            issuerIcon: "fa-brands fa-ibm",
-            date: "Date: Available on certificate",
-            verifyUrl: "https://coursera.org/verify/PW3NM3XTG5CD"
-        }
-    ];
+/* =========================================================
+   SAHIL JIRAPURE - PORTFOLIO JAVASCRIPT
+   ========================================================= */
 
-    const projects = [
-        {
-            title: "FitSync - Fitness & Diet Recommendation Platform",
-            problem: "Individuals struggle to align workout routines with nutrition plans, causing inconsistent results and poor adherence. FitSync unifies activity tracking and dietary planning into one recommendation engine.",
-            stack: [
-                { name: "MongoDB", icon: "fa-solid fa-database" },
-                { name: "Express", icon: "fa-solid fa-server" },
-                { name: "React", icon: "fa-brands fa-react" },
-                { name: "Node.js", icon: "fa-brands fa-node-js" },
-                { name: "REST APIs", icon: "fa-solid fa-cloud" }
-            ],
-            features: [
-                "Personalized workout and calorie recommendations based on user goals and history",
-                "Nutrition logging with macro-level progress analytics and trend visualization",
-                "Secure profile system with goal tracking and adherence reminders",
-                "Responsive dashboard optimized for mobile-first usage"
-            ],
-            demoUrl: "#",
-            repoUrl: "https://github.com/sahil7751/FitSync",
-            themeClass: "theme-a",
-            previewTag: "MERN Full Stack",
-            imageUrl: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=1200&q=60"
-        },
-        {
-            title: "bit-chats (Decentralized Messaging App)",
-            problem: "Traditional messaging relies on centralized servers and persistent internet access. bit-chats enables private communication in constrained environments with decentralized, offline-capable networking.",
-            stack: [
-                { name: "Rust", icon: "fa-solid fa-code" },
-                { name: "Bluetooth Mesh", icon: "fa-brands fa-bluetooth-b" },
-                { name: "Tor (Arti)", icon: "fa-solid fa-user-secret" },
-                { name: "E2E Encryption", icon: "fa-solid fa-lock" }
-            ],
-            features: [
-                "Peer-to-peer message relay without centralized message brokers",
-                "Offline-first message propagation over BLE mesh networks",
-                "Anonymity route support with Tor (Arti) integration",
-                "End-to-end encrypted communication pipeline with secure key handling"
-            ],
-            demoUrl: "#",
-            repoUrl: "https://github.com/sahil7751/Bit-chats",
-            themeClass: "theme-b",
-            previewTag: "Decentralized Communication",
-            imageUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=60"
-        },
-        {
-            title: "Fake News Detection System",
-            problem: "Misinformation spreads faster than manual fact-checking workflows. This system assists users by classifying suspicious content into REAL, FAKE, or UNCERTAIN categories using machine learning.",
-            stack: [
-                { name: "Python", icon: "fa-brands fa-python" },
-                { name: "Scikit-learn", icon: "fa-solid fa-brain" },
-                { name: "NLP", icon: "fa-solid fa-language" },
-                { name: "Model Evaluation", icon: "fa-solid fa-chart-line" }
-            ],
-            features: [
-                "Text preprocessing and feature extraction pipeline for robust classification",
-                "Multi-class confidence output: REAL / FAKE / UNCERTAIN",
-                "Comparative model evaluation with precision, recall, and F1 insights",
-                "Prediction-ready interface for fast newsroom and research workflows"
-            ],
-            demoUrl: "#",
-            repoUrl: "https://github.com/sahil7751/Fake-News-Detection-System",
-            themeClass: "theme-c",
-            previewTag: "AI Classification",
-            imageUrl: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=60"
-        },
-        {
-            title: "AI-Powered Employee Attrition Prediction System",
-            problem: "HR teams often react too late to employee churn patterns. This B2B analytics solution predicts attrition risk early, enabling proactive retention strategies.",
-            stack: [
-                { name: "Python", icon: "fa-brands fa-python" },
-                { name: "Pandas", icon: "fa-solid fa-table" },
-                { name: "XGBoost", icon: "fa-solid fa-diagram-project" },
-                { name: "Data Visualization", icon: "fa-solid fa-chart-pie" }
-            ],
-            features: [
-                "Attrition risk scoring with interpretable feature importance",
-                "Cohort-level analytics for department and tenure-based insights",
-                "Actionable retention recommendations driven by model outputs",
-                "Dashboard-ready data export for HR and leadership reporting"
-            ],
-            demoUrl: "#",
-            repoUrl: "https://github.com/sahil7751",
-            themeClass: "theme-d",
-            previewTag: "HR Analytics",
-            imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=60"
-        },
-        {
-            title: "EduStake - College Resource Sharing Platform",
-            problem: "Students lose time searching scattered notes, assignments, and references. EduStake centralizes academic resources with structured discovery and controlled sharing.",
-            stack: [
-                { name: "JavaScript", icon: "fa-brands fa-js" },
-                { name: "Node.js", icon: "fa-brands fa-node-js" },
-                { name: "Express", icon: "fa-solid fa-server" },
-                { name: "MongoDB", icon: "fa-solid fa-database" }
-            ],
-            features: [
-                "Upload and approval workflow for high-quality learning resources",
-                "Course, semester, and topic tagging for fast retrieval",
-                "Role-based permissions for contributors and moderators",
-                "Usage metrics to identify high-value content for students"
-            ],
-            demoUrl: "#",
-            repoUrl: "https://github.com/sahil7751",
-            themeClass: "theme-e",
-            previewTag: "Academic Platform",
-            imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=60"
-        }
-    ];
+"use strict";
 
-    const projectGrid = document.getElementById("projectGrid");
-    const certGrid = document.getElementById("certGrid");
-    const scrollProgress = document.getElementById("scrollProgress");
-    const pageLoader = document.getElementById("pageLoader");
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll("main section[id], header[id]");
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.getElementById("navMenu");
-    const contactForm = document.getElementById("contactForm");
-    const formFeedback = document.getElementById("formFeedback");
 
-    function renderProjects() {
-        if (!projectGrid) {
-            return;
-        }
+/* =========================================================
+   PROJECT DATA
+   ========================================================= */
 
-        const cardsMarkup = projects.map((project) => {
-            const stackMarkup = project.stack
-                .map((item) => `<li><i class="${item.icon}" aria-hidden="true"></i>${item.name}</li>`)
-                .join("");
-            const featureMarkup = project.features.map((item) => `<li>${item}</li>`).join("");
+const projects = [
 
-            const demoLabel = project.demoUrl === "#" ? "Live Demo (Soon)" : "Live Demo";
-            const demoAttrs = project.demoUrl === "#" ? "aria-disabled=\"true\"" : "";
+    {
+        title: "AI-Powered Interview Prep Platform",
 
-            return `
-                <article class="project-card glass reveal">
-                    <div class="project-media ${project.themeClass}">
-                        <img class="project-image" src="${project.imageUrl}" alt="${project.title} preview" loading="lazy" decoding="async" width="1200" height="800">
-                        <div class="project-preview-frame" aria-hidden="true">
-                            <div class="preview-dot-row">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="preview-lines">
-                                <em></em><em></em><em></em>
-                            </div>
-                        </div>
-                        <span>${project.previewTag}</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>${project.title}</h3>
-                        <p class="project-problem">${project.problem}</p>
+        category: "Full Stack + AI",
 
-                        <ul class="stack-tags" aria-label="Tech stack for ${project.title}">
-                            ${stackMarkup}
-                        </ul>
+        description:
+            "A full-stack job tracking and interview preparation platform with secure authentication, role-based access and AI-assisted features.",
 
-                        <ul class="project-features">
-                            ${featureMarkup}
-                        </ul>
+        stack: [
+            "Java",
+            "Spring Boot",
+            "React",
+            "MySQL",
+            "Docker",
+            "Groq API",
+            "JWT"
+        ],
 
-                        <div class="project-actions">
-                            <a class="btn btn-primary${project.demoUrl === "#" ? " is-disabled" : ""}" href="${project.demoUrl}" ${demoAttrs} target="_blank" rel="noopener noreferrer">${demoLabel}</a>
-                            <a class="btn btn-ghost" href="${project.repoUrl}" target="_blank" rel="noopener noreferrer">View GitHub</a>
-                        </div>
-                    </div>
-                </article>
-            `;
-        }).join("");
+        features: [
+            "Built 30+ REST APIs for applications, interviews and dashboard analytics",
+            "Implemented JWT authentication and role-based access control",
+            "Integrated Groq API for resume analysis and job recommendations",
+            "Containerized the complete application using Docker"
+        ],
 
-        projectGrid.innerHTML = cardsMarkup;
+        github:
+            "https://github.com/sahil7751/interview-prep-api",
+
+        demo: ""
+    },
+
+
+    {
+        title: "AI-Powered Employee Attrition Prediction",
+
+        category: "Machine Learning",
+
+        description:
+            "A machine-learning system for predicting employee attrition and identifying the major factors influencing employee retention.",
+
+        stack: [
+            "Python",
+            "XGBoost",
+            "Scikit-learn",
+            "Pandas",
+            "NumPy",
+            "Matplotlib"
+        ],
+
+        features: [
+            "Trained an XGBoost classifier using 1,470 IBM HR records",
+            "Improved prediction accuracy from 78% baseline to 87%",
+            "Built an end-to-end data preprocessing pipeline",
+            "Identified 10 key attrition drivers using feature importance"
+        ],
+
+        github:
+            "https://github.com/sahil7751/AI-Powered-Employee-Attrition-Prediction-System-for-B2B-HR-Analytics",
+
+        demo: ""
+    },
+
+
+    {
+        title: "Fake News Detection System",
+
+        category: "NLP + Machine Learning",
+
+        description:
+            "An NLP-based fake news classification system with a Flask REST API and Supabase authentication.",
+
+        stack: [
+            "Python",
+            "Flask",
+            "NLP",
+            "TF-IDF",
+            "Scikit-learn",
+            "Supabase"
+        ],
+
+        features: [
+            "Trained the NLP classifier on 20,800+ news articles",
+            "Achieved 97% classification accuracy",
+            "Used TF-IDF for text feature extraction",
+            "Built a Flask REST API with Supabase authentication"
+        ],
+
+        github:
+            "https://github.com/sahil7751/Fake-News-Detection-System",
+
+        demo: ""
+    },
+
+
+    {
+        title: "Student Management System",
+
+        category: "Full Stack CRUD",
+
+        description:
+            "A full-stack student management application for managing student records through a Spring Boot backend and web interface.",
+
+        stack: [
+            "Java",
+            "Spring Boot",
+            "React",
+            "MySQL"
+        ],
+
+        features: [
+            "Create and manage student records",
+            "Implemented complete CRUD functionality",
+            "Spring Boot REST backend",
+            "Database-backed student management"
+        ],
+
+        github:
+            "https://github.com/sahil7751/Student-management-system",
+
+        demo: ""
+    },
+
+
+    {
+        title: "Digital Marketing Agency Website",
+
+        category: "Web Development",
+
+        description:
+            "A responsive digital marketing agency website built with a modern frontend stack and deployed publicly on Vercel.",
+
+        stack: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+
+        features: [
+            "Responsive desktop and mobile interface",
+            "Modern reusable UI components",
+            "SEO-oriented website structure",
+            "Deployed publicly using Vercel"
+        ],
+
+        github:
+            "https://github.com/sahil7751/Digital-Marketing-Agency-Website",
+
+        demo:
+            "https://digital-marketing-agency-gilt.vercel.app"
     }
 
-    function renderCertifications() {
-        if (!certGrid) {
-            return;
-        }
+];
 
-        const certCardsMarkup = certifications.map((cert) => `
-            <article class="cert-card glass reveal">
-                <div class="cert-issuer">
-                    <i class="${cert.issuerIcon}" aria-hidden="true"></i>
-                    <span>${cert.issuer}</span>
+
+
+/* =========================================================
+   CERTIFICATION DATA
+   ========================================================= */
+
+const certifications = [
+
+    {
+        title:
+            "Design and Analysis of Algorithms",
+
+        issuer:
+            "NPTEL",
+
+        date:
+            "Jul – Sep 2025",
+
+        icon:
+            "fa-solid fa-code",
+
+        credential:
+            ""
+    },
+
+
+    {
+        title:
+            "Computational Thinking for Problem Solving",
+
+        issuer:
+            "Coursera",
+
+        date:
+            "December 2023",
+
+        icon:
+            "fa-solid fa-brain",
+
+        credential:
+            ""
+    },
+
+
+    {
+        title:
+            "Introduction to Computers, OS & Security",
+
+        issuer:
+            "Coursera",
+
+        date:
+            "December 2023",
+
+        icon:
+            "fa-solid fa-shield-halved",
+
+        credential:
+            ""
+    }
+
+];
+
+
+
+/* =========================================================
+   DOM ELEMENTS
+   ========================================================= */
+
+const projectGrid =
+    document.getElementById("projectGrid");
+
+const certGrid =
+    document.getElementById("certGrid");
+
+const menuToggle =
+    document.querySelector(".menu-toggle");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+const scrollProgress =
+    document.getElementById("scrollProgress");
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const formFeedback =
+    document.getElementById("formFeedback");
+
+
+
+/* =========================================================
+   PAGE LOADER
+   ========================================================= */
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("is-loaded");
+
+});
+
+
+
+/* =========================================================
+   PROJECT FALLBACK IMAGE
+   ========================================================= */
+
+const projectPlaceholder = `
+    data:image/svg+xml;charset=UTF-8,
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="900"
+        height="500"
+        viewBox="0 0 900 500">
+
+        <defs>
+
+            <linearGradient
+                id="gradient"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="1">
+
+                <stop
+                    offset="0%"
+                    stop-color="%23eaf1ff"/>
+
+                <stop
+                    offset="100%"
+                    stop-color="%23fbe8d3"/>
+
+            </linearGradient>
+
+        </defs>
+
+        <rect
+            width="900"
+            height="500"
+            fill="url(%23gradient)"/>
+
+        <circle
+            cx="450"
+            cy="205"
+            r="65"
+            fill="%232a6ef3"
+            opacity="0.12"/>
+
+        <text
+            x="450"
+            y="225"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="54"
+            font-weight="700"
+            fill="%232a6ef3">
+            &lt;/&gt;
+        </text>
+
+        <text
+            x="450"
+            y="320"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="26"
+            font-weight="600"
+            fill="%23101c38">
+            Project Preview
+        </text>
+
+    </svg>
+`.replace(/\n/g, "");
+
+
+
+/* =========================================================
+   CREATE PROJECT CARD
+   ========================================================= */
+
+function createProjectCard(project, index) {
+
+    const stackHTML = project.stack
+        .map(technology => `<li>${technology}</li>`)
+        .join("");
+
+
+    const featuresHTML = project.features
+        .map(feature => `<li>${feature}</li>`)
+        .join("");
+
+
+    const demoButton = project.demo
+        ? `
+            <a
+                class="btn btn-primary"
+                href="${project.demo}"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Live Demo
+
+            </a>
+        `
+        : "";
+
+
+    return `
+
+        <article
+            class="project-card glass reveal"
+            style="transition-delay:${Math.min(index * 0.05, 0.2)}s">
+
+
+            <div class="project-placeholder">
+
+                <div class="project-placeholder-icon">
+                    <i class="fa-solid fa-code"></i>
                 </div>
-                <h3>${cert.title}</h3>
-                <p class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i>${cert.date}</p>
-                <a class="btn btn-primary cert-btn" href="${cert.verifyUrl}" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </article>
-        `).join("");
 
-        certGrid.innerHTML = certCardsMarkup;
+                <span>${project.category}</span>
+
+            </div>
+
+
+            <div class="project-body">
+
+                <h3>${project.title}</h3>
+
+
+                <p class="project-problem">
+                    ${project.description}
+                </p>
+
+
+                <ul class="stack-tags">
+                    ${stackHTML}
+                </ul>
+
+
+                <ul class="project-features">
+                    ${featuresHTML}
+                </ul>
+
+
+                <div class="project-actions">
+
+                    <a
+                        class="btn btn-ghost"
+                        href="${project.github}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-github"></i>
+                        Source Code
+
+                    </a>
+
+                    ${demoButton}
+
+                </div>
+
+            </div>
+
+        </article>
+
+    `;
+}
+
+
+/* =========================================================
+   RENDER PROJECTS
+   ========================================================= */
+
+function renderProjects() {
+
+    if (!projectGrid) {
+        return;
     }
 
-    function setupMobileNav() {
-        if (!menuToggle || !navMenu) {
-            return;
+
+    projectGrid.innerHTML =
+        projects
+            .map(createProjectCard)
+            .join("");
+
+}
+
+
+
+/* =========================================================
+   CREATE CERTIFICATION CARD
+   ========================================================= */
+
+function createCertificationCard(cert, index) {
+
+    const credentialButton =
+        cert.credential
+            ? `
+                <a
+                    class="btn btn-ghost cert-btn"
+                    href="${cert.credential}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    View Credential
+
+                </a>
+            `
+            : `
+                <span
+                    class="btn btn-ghost cert-btn is-disabled">
+
+                    Certificate
+
+                </span>
+            `;
+
+
+    return `
+
+        <article
+            class="cert-card glass reveal"
+            style="transition-delay: ${Math.min(index * 0.08, 0.2)
+        }s">
+
+
+            <p class="cert-issuer">
+
+                <i class="${cert.icon}"></i>
+
+                ${cert.issuer}
+
+            </p>
+
+
+            <h3>
+                ${cert.title}
+            </h3>
+
+
+            <p class="cert-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                ${cert.date}
+
+            </p>
+
+
+            ${credentialButton}
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* =========================================================
+   RENDER CERTIFICATIONS
+   ========================================================= */
+
+function renderCertifications() {
+
+    if (!certGrid) {
+        return;
+    }
+
+
+    certGrid.innerHTML =
+        certifications
+            .map(createCertificationCard)
+            .join("");
+
+}
+
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+function closeMobileMenu() {
+
+    if (!navMenu || !menuToggle) {
+        return;
+    }
+
+
+    navMenu.classList.remove("open");
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
+
+
+
+if (menuToggle && navMenu) {
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navMenu.classList.toggle("open");
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        }
+    );
+
+}
+
+
+
+/* CLOSE MENU AFTER LINK CLICK */
+
+navLinks.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        closeMobileMenu
+    );
+
+});
+
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "main section[id], header[id]"
+    );
+
+
+function updateActiveNavigation() {
+
+    const scrollPosition =
+        window.scrollY + 180;
+
+
+    let currentSection =
+        "home";
+
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop;
+
+
+        const sectionHeight =
+            section.offsetHeight;
+
+
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition <
+            sectionTop + sectionHeight
+        ) {
+
+            currentSection =
+                section.getAttribute("id");
+
         }
 
-        menuToggle.addEventListener("click", () => {
-            const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-            menuToggle.setAttribute("aria-expanded", String(!expanded));
-            navMenu.classList.toggle("open", !expanded);
-        });
+    });
 
-        navLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                menuToggle.setAttribute("aria-expanded", "false");
-                navMenu.classList.remove("open");
-            });
-        });
-    }
 
-    function setActiveNavLink() {
-        let currentId = "home";
+    navLinks.forEach(link => {
 
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 120;
-            if (window.scrollY >= sectionTop) {
-                currentId = section.id;
-            }
-        });
+        link.classList.remove("active");
 
-        navLinks.forEach((link) => {
-            const linkTarget = link.getAttribute("href") || "";
-            link.classList.toggle("active", linkTarget === `#${currentId}`);
-        });
-    }
 
-    function setupEfficientActiveNav() {
-        let ticking = false;
+        const href =
+            link.getAttribute("href");
 
-        const handleScroll = () => {
-            if (ticking) {
-                return;
-            }
 
-            window.requestAnimationFrame(() => {
-                setActiveNavLink();
-                updateScrollProgress();
-                ticking = false;
-            });
+        if (
+            href ===
+            `#${currentSection}`
+        ) {
 
-            ticking = true;
-        };
+            link.classList.add("active");
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
-    }
-
-    function updateScrollProgress() {
-        if (!scrollProgress) {
-            return;
         }
 
-        const scrollTop = window.scrollY;
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = scrollable > 0 ? (scrollTop / scrollable) * 100 : 0;
-        scrollProgress.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+    });
+
+}
+
+
+
+/* =========================================================
+   SCROLL PROGRESS BAR
+   ========================================================= */
+
+function updateScrollProgress() {
+
+    if (!scrollProgress) {
+        return;
     }
 
-    function setupScrollReveal() {
-        const revealItems = document.querySelectorAll(".reveal");
-        const observer = new IntersectionObserver(
-            (entries, entryObserver) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("in-view");
-                        entryObserver.unobserve(entry.target);
+
+    const scrollTop =
+        window.scrollY;
+
+
+    const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+
+    if (documentHeight <= 0) {
+
+        scrollProgress.style.width =
+            "0%";
+
+        return;
+
+    }
+
+
+    const progress =
+        Math.min(
+            100,
+            Math.max(
+                0,
+                (
+                    scrollTop /
+                    documentHeight
+                ) * 100
+            )
+        );
+
+
+    scrollProgress.style.width =
+        `${progress}%`;
+
+}
+
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+function setupRevealAnimations() {
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    /*
+       Fallback:
+       If IntersectionObserver isn't supported,
+       show everything.
+    */
+
+    if (
+        !(
+            "IntersectionObserver"
+            in window
+        )
+    ) {
+
+        revealElements.forEach(element => {
+
+            element.classList.add("visible");
+
+        });
+
+        return;
+
+    }
+
+
+    const observer =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                            .classList
+                            .add("visible");
+
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
                     }
+
                 });
+
             },
+
             {
-                threshold: 0.18,
-                rootMargin: "0px 0px -40px 0px"
+                threshold: 0.08,
+
+                rootMargin:
+                    "0px 0px -30px 0px"
+            }
+
+        );
+
+
+    revealElements.forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+}
+
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+
+            /* VALIDATION */
+
+            if (
+                !name ||
+                !email ||
+                !message
+            ) {
+
+                if (formFeedback) {
+
+                    formFeedback.textContent =
+                        "Please complete all fields.";
+
+                }
+
+                return;
+
+            }
+
+
+
+            /* SIMPLE EMAIL CHECK */
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (
+                !emailPattern.test(email)
+            ) {
+
+                if (formFeedback) {
+
+                    formFeedback.textContent =
+                        "Please enter a valid email address.";
+
+                }
+
+                return;
+
+            }
+
+
+
+            /*
+             * There is currently no backend
+             * connected to this form.
+             *
+             * Instead of pretending the message
+             * was sent, open the user's email app.
+             */
+
+            const subject =
+                encodeURIComponent(
+                    `Portfolio enquiry from ${name}`
+                );
+
+
+            const body =
+                encodeURIComponent(
+                    `Hi Sahil,
+
+My name is ${name}.
+
+${message}
+
+Email: ${email}`
+                );
+
+
+            window.location.href =
+                `mailto:sahiljirapure8@gmail.com?subject=${subject}&body=${body}`;
+
+
+
+            if (formFeedback) {
+
+                formFeedback.textContent =
+                    "Opening your email application...";
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   GLOBAL SCROLL EVENT
+   ========================================================= */
+
+let scrollTicking = false;
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (scrollTicking) {
+            return;
+        }
+
+
+        scrollTicking = true;
+
+
+        window.requestAnimationFrame(
+            () => {
+
+                updateScrollProgress();
+
+                updateActiveNavigation();
+
+                scrollTicking = false;
+
             }
         );
 
-        revealItems.forEach((item) => observer.observe(item));
+    },
+    {
+        passive: true
     }
+);
 
-    function setupContactForm() {
-        if (!contactForm || !formFeedback) {
-            return;
+
+
+/* =========================================================
+   ESCAPE CLOSES MOBILE MENU
+   ========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeMobileMenu();
+
         }
 
-        contactForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            if (!contactForm.checkValidity()) {
-                formFeedback.textContent = "Please complete all required fields before submitting.";
-                return;
-            }
-
-            formFeedback.textContent = "Thanks for your message. I will get back to you soon.";
-            contactForm.reset();
-        });
     }
+);
 
-    function setupPageLoader() {
-        if (!pageLoader) {
-            return;
-        }
 
-        const finishLoading = () => {
-            document.body.classList.add("is-loaded");
-        };
 
-        if (document.readyState === "complete") {
-            finishLoading();
-            return;
-        }
+/* =========================================================
+   INITIALIZE WEBSITE
+   ========================================================= */
 
-        window.addEventListener("load", finishLoading, { once: true });
-
-        window.setTimeout(finishLoading, 1600);
-    }
+function initializePortfolio() {
 
     renderProjects();
+
     renderCertifications();
-    setupMobileNav();
-    setupScrollReveal();
-    setupContactForm();
-    setActiveNavLink();
+
+    /*
+     * IMPORTANT:
+     * Projects and certificates must
+     * render BEFORE reveal observer
+     * is initialized.
+     */
+
+    setupRevealAnimations();
+
     updateScrollProgress();
-    setupEfficientActiveNav();
-    setupPageLoader();
-});
+
+    updateActiveNavigation();
+
+}
+
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    initializePortfolio
+);
